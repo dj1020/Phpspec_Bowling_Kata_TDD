@@ -48,7 +48,7 @@ class BowlingGameSpec extends ObjectBehavior
 
     public function it_should_score_24_with_one_strike()
     {
-        $this->roll(10);
+        $this->rollStrike();
         $this->roll(3);
         $this->roll(4);
         $this->rollMany(0, 16);
@@ -66,6 +66,11 @@ class BowlingGameSpec extends ObjectBehavior
     {
         $this->roll(2);
         $this->roll(8);
+    }
+
+    private function rollStrike()
+    {
+        $this->roll(10);
     }
 
 }
