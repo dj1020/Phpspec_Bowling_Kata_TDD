@@ -36,17 +36,6 @@ class BowlingGameSpec extends ObjectBehavior
         $this->score()->shouldReturn(14);
     }
 
-    public function it_should_score_19()
-    {
-        $this->roll(2);
-        $this->roll(8);
-        $this->roll(2);
-        $this->roll(5);
-        $this->rollMany(0, 16);
-
-        $this->score()->shouldReturn(19);
-    }
-
     private function rollMany($pins, $times) {
         for ($i = 1; $i <= $times; $i++) {
             $this->roll($pins);
