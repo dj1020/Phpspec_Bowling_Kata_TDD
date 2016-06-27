@@ -26,7 +26,7 @@ class BowlingGameSpec extends ObjectBehavior
         $this->score()->shouldReturn(20);
     }
 
-    public function it_should_score_14()
+    public function it_should_score_14_with_one_spare()
     {
         $this->roll(2);
         $this->roll(8);
@@ -36,7 +36,7 @@ class BowlingGameSpec extends ObjectBehavior
         $this->score()->shouldReturn(14);
     }
 
-    public function it_should_score_19()
+    public function it_should_score_19_with_one_spare()
     {
         $this->rollSpare();
         $this->roll(2);
