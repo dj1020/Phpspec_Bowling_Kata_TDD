@@ -38,8 +38,7 @@ class BowlingGameSpec extends ObjectBehavior
 
     public function it_should_score_19()
     {
-        $this->roll(2);
-        $this->roll(8);
+        $this->rollSpare();
         $this->roll(2);
         $this->roll(5);
         $this->rollMany(0, 16);
@@ -51,6 +50,12 @@ class BowlingGameSpec extends ObjectBehavior
         for ($i = 1; $i <= $times; $i++) {
             $this->roll($pins);
         }
+    }
+
+    private function rollSpare()
+    {
+        $this->roll(2);
+        $this->roll(8);
     }
 
 }
