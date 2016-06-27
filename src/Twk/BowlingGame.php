@@ -45,4 +45,9 @@ class BowlingGame
     {
         return $this->rolls[$frameIndex] + $this->rolls[$frameIndex + 1] == 10;
     }
+
+    private function isStrike($frameIndex)
+    {
+        return $this->rolls[$frameIndex] == 10;
+    }
 }
