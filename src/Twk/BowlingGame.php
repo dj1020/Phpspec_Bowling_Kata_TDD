@@ -17,14 +17,14 @@ class BowlingGame
     public function score()
     {
         $frame = 0;
-        $i = 0;
+        $frameIndex = 0;
         for ($frame = 0; $frame < 10; $frame ++) {
-            if ( $this->rolls[$i] + $this->rolls[$i + 1] == 10) {
-                $this->score += 10 + $this->rolls[$i + 2];
+            if ( $this->rolls[$frameIndex] + $this->rolls[$frameIndex + 1] == 10) {
+                $this->score += 10 + $this->rolls[$frameIndex + 2];
             } else {
-                $this->score += $this->rolls[$i] + $this->rolls[$i + 1];
+                $this->score += $this->rolls[$frameIndex] + $this->rolls[$frameIndex + 1];
             }
-            $i += 2;
+            $frameIndex += 2;
         }
 
         return $this->score;
