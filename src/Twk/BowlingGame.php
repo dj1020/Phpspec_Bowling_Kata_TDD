@@ -8,6 +8,11 @@ class BowlingGame
     private $rolls = [];
     private $rollIndex = 0;
 
+    public function __construct()
+    {
+        $this->rolls = array_fill(0, 21, 0);
+    }
+
     public function roll($pins)
     {
         $this->rolls[$this->rollIndex] = $pins;
