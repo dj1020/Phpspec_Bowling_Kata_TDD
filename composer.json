@@ -1,0 +1,7 @@
+{
+    "name": "twinkledj/bowling-kata2",
+    "require-dev": {
+        "phpspec/phpspec": "^2.5"
+    },
+    "require": {}
+}
