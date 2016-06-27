@@ -29,4 +29,9 @@ class BowlingGame
 
         return $this->score;
     }
+
+    private function isSpare($frameIndex)
+    {
+        return $this->rolls[$frameIndex] + $this->rolls[$frameIndex + 1] == 10;
+    }
 }
