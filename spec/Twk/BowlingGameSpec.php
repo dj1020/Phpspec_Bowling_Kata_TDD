@@ -56,6 +56,13 @@ class BowlingGameSpec extends ObjectBehavior
         $this->score()->shouldReturn(24);
     }
 
+    public function it_should_score_300_as_a_perfect_game()
+    {
+        $this->rollMany(10, 12);
+
+        $this->score()->shouldReturn(300);
+    }
+
     private function rollMany($pins, $times) {
         for ($i = 1; $i <= $times; $i++) {
             $this->roll($pins);
